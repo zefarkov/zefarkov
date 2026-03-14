@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Farrukh Abdurazzokov | Network Engineer</title>
+  <meta name="description" content="Personal website of Farrukh Abdurazzokov - network engineer, systems administrator, and IT infrastructure specialist." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#" class="brand"><span id="brand-text">Farrukh</span><span>.</span></a>
+
+      <div class="nav-side">
+        <nav class="nav-links">
+          <a id="nav-about" href="#about">About</a>
+          <a id="nav-experience" href="#experience">Experience</a>
+          <a id="nav-skills" href="#skills">Skills</a>
+          <a id="nav-projects" href="#projects">Projects</a>
+          <a id="nav-certifications" href="#certifications">Certifications</a>
+          <a id="nav-contact" href="#contact">Contact</a>
+        </nav>
+
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="ru" type="button">RU</button>
+          <button class="lang-btn" data-lang="uz" type="button">UZ</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-wrap">
+        <div class="panel hero-main">
+          <span class="eyebrow" id="hero-eyebrow"></span>
+          <h1 id="hero-title"></h1>
+          <p id="hero-text"></p>
+          <div class="stats" id="stats"></div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" id="hero-primary" href="#contact">Contact Me</a>
+            <a class="btn btn-secondary" id="hero-secondary" href="#experience">View Experience</a>
+            <a class="btn btn-soft" id="hero-cv" href="assets/cv/Farrukh_EN.pdf" download>Download CV</a>
+          </div>
+          
+
+        </div>
+
+        <aside class="panel hero-side">
+          <img class="profile-photo" id="profile-photo" src="assets/images/profile.jpg" alt="Profile photo" />
+
+          <div class="profile-box">
+            <div class="mini" id="summary-mini"></div>
+            <div class="role" id="summary-role"></div>
+            <div class="desc" id="summary-desc"></div>
+          </div>
+          <div class="hero-tags" id="hero-tags"></div>          
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-sm" id="about">
+      <div class="container grid-2">
+        <div class="card" id="about-card">
+          <div class="section-head">
+            <span class="eyebrow"></span>
+            <h2></h2>
+            <p></p>
+          </div>
+          <ul class="list-clean"></ul>
+        </div>
+
+        <div class="card" id="value-card">
+          <div class="section-head">
+            <span class="eyebrow"></span>
+            <h2></h2>
+          </div>
+          <ul class="list-clean"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="experience-eyebrow"></span>
+          <h2 id="experience-title"></h2>
+          <p id="experience-text"></p>
+        </div>
+        <div class="timeline" id="experience-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="skills-eyebrow"></span>
+          <h2 id="skills-title"></h2>
+          <p id="skills-text"></p>
+        </div>
+        <div class="skills-grid" id="skills-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="projects-eyebrow"></span>
+          <h2 id="projects-title"></h2>
+          <p id="projects-text"></p>
+        </div>
+        <div class="projects-grid" id="projects-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="certifications">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow" id="certs-eyebrow"></span>
+          <h2 id="certs-title"></h2>
+          <p id="certs-text"></p>
+        </div>
+        <div class="cert-grid" id="certs-list"></div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-card">
+          <div class="section-head">
+            <span class="eyebrow" id="contact-eyebrow"></span>
+            <h2 id="contact-title"></h2>
+            <p id="contact-text"></p>
+          </div>
+
+          <div class="contact-lines">
+            <div class="contact-line">
+              <small id="contact-email-label"></small>
+              <strong id="contact-email-value"></strong>
+            </div>
+            <div class="contact-line">
+              <small id="contact-phone-label"></small>
+              <strong id="contact-phone-value"></strong>
+            </div>
+            <div class="contact-line">
+              <small id="contact-location-label"></small>
+              <strong id="contact-location-value"></strong>
+            </div>
+            <div class="contact-line">
+              <small id="contact-telegram-label"></small>
+              <a id="contact-telegram-value"></a>
+            </div>
+            <div class="contact-line">
+              <small id="contact-linkedin-label"></small>
+              <a id="contact-linkedin-value"></a>
+            </div>
+            <div class="contact-line">
+              <small id="contact-github-label"></small>
+              <a id="contact-github-value"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <form class="contact-form" id="contact-form" method="POST">
+            <input type="hidden" name="_subject" value="New message from portfolio website">
+            <input type="text" name="_gotcha" style="display:none">
+            <input type="hidden" name="_next" value="https://zefarkov.uz/">
+
+            <div class="field">
+            <label id="label-name" for="name"></label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="field">
+            <label id="label-email" for="email"></label>
+            <input id="email" name="email" type="email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="field">
+            <label id="label-message" for="message"></label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button class="send-btn" id="send-btn" type="submit"></button>
+            <div class="form-note" id="form-note"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container" id="footer-text"></div>
+  </footer>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
