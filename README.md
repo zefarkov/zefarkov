@@ -1,4 +1,4 @@
-# Farrukh Abdurazzokov — Infrastructure / Network Engineer
+# Farrukh Abdurazzokov - Infrastructure / Network Engineer
 
 Personal portfolio website presenting experience in network infrastructure,
 systems administration, monitoring, security, and business IT operations.
