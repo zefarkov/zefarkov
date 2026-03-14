@@ -9,8 +9,8 @@ window.PORTFOLIO_DATA = {
     formAction: "https://formspree.io/f/mjgaoaqq",
     profileImage: "assets/images/profile.jpg",
     cv: {
-      ru: "assets/cv/Farrukh_RU.pdf",
-      en: "assets/cv/Farrukh_EN.pdf"
+      ru: "assets/cv/CV_Farrukh_RU.pdf",
+      en: "assets/cv/CV_Farrukh_EN.pdf"
     }
   },
   stats: [
