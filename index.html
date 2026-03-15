@@ -208,6 +208,7 @@
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
+      eventType: "visit",
       page: location.href,
       ref: document.referrer || "",
       ua: navigator.userAgent
@@ -219,7 +220,8 @@
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        page: "/assets/cv/CV_Farrukh_EN.pdf",
+        eventType: "cv_download",
+        page: "CV_DOWNLOAD",
         ref: location.href,
         ua: navigator.userAgent
       })
