@@ -202,16 +202,29 @@
 
 <script src="assets/js/content.js"></script>
 <script src="assets/js/app.js"></script>
+
 <script>
-fetch("https://zefarkov.zefarkov.workers.dev/", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({
-    page: location.href,
-    ref: document.referrer || "",
-    ua: navigator.userAgent
-  })
-}).catch(() => {});
+  fetch("https://zefarkov.zefarkov.workers.dev/", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      page: location.href,
+      ref: document.referrer || "",
+      ua: navigator.userAgent
+    })
+  }).catch(() => {});
+
+  document.getElementById("hero-cv")?.addEventListener("click", () => {
+    fetch("https://zefarkov.zefarkov.workers.dev/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        page: "/assets/cv/CV_Farrukh_EN.pdf",
+        ref: location.href,
+        ua: navigator.userAgent
+      })
+    }).catch(() => {});
+  });
 </script>
 </body>
 </html>
