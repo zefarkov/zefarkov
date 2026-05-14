@@ -107,8 +107,13 @@ button,input,textarea,select{font:inherit}
   display:flex;
   align-items:center;
   justify-content:flex-end;
-  gap:10px;
   min-width:0;
+}
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex:0 0 auto;
 }
 .nav-links{
   display:flex;
@@ -537,6 +542,24 @@ button,input,textarea,select{font:inherit}
   .container{width:min(calc(100% - 28px), var(--max))}
   .nav{min-height:64px}
   .brand{font-size:.88rem;white-space:nowrap}
+  .header-actions{
+    margin-left:auto;
+    gap:6px;
+  }
+  .theme-toggle{
+    min-height:34px;
+    padding:0 10px;
+    font-size:.78rem;
+  }
+  .lang-switch{
+    gap:2px;
+    padding:3px;
+  }
+  .lang-btn{
+    min-width:32px;
+    height:28px;
+    font-size:.7rem;
+  }
   .menu-toggle{display:flex}
   .nav-side{
     position:fixed;
@@ -545,8 +568,9 @@ button,input,textarea,select{font:inherit}
     top:76px;
     display:grid;
     gap:12px;
-    align-items:stretch;
-    padding:14px;
+    align-items:center;
+    justify-items:center;
+    padding:18px;
     border:1px solid var(--line-strong);
     border-radius:18px;
     background:color-mix(in srgb, var(--bg-2) 96%, transparent);
@@ -563,16 +587,17 @@ button,input,textarea,select{font:inherit}
   }
   .nav-links{
     display:grid;
-    gap:5px;
+    gap:6px;
+    justify-items:center;
     white-space:normal;
+    width:100%;
   }
   .nav-links a{
-    width:100%;
+    width:min(100%, 260px);
     padding:12px 14px;
+    text-align:center;
     font-size:.94rem;
   }
-  .theme-toggle,.lang-switch{width:100%;justify-content:center}
-  .lang-btn{flex:1}
   .hero{padding-top:24px}
   .hero-main,.hero-side,.card,.timeline-item,.skill-box,.cert-card,.project-card,.contact-card{border-radius:16px}
   .hero-main{padding:26px}
@@ -584,7 +609,11 @@ button,input,textarea,select{font:inherit}
   .section,.section-sm{padding:30px 0}
 }
 @media (max-width:460px){
+  .nav{gap:8px}
   .brand{font-size:.76rem;min-width:0}
+  .theme-toggle{padding:0 8px}
+  .lang-btn{min-width:29px}
+  .menu-toggle{width:40px}
   .hero-main,.hero-side,.card,.timeline-item,.skill-box,.cert-card,.project-card,.contact-card{padding:18px}
   .hero-main h1{font-size:2rem}
   .cert-top,.project-top{display:grid}
