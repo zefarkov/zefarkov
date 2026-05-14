@@ -1,6 +1,13 @@
 (function () {
   const data = window.PORTFOLIO_DATA;
   const state = { lang: "en" };
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navSide = document.querySelector(".nav-side");
+  const themeToggle = document.querySelector("#theme-toggle");
+  const themeLabel = document.querySelector("#theme-label");
+  const themeState = {
+    value: localStorage.getItem("portfolio-theme") || "dark"
+  };
 
   const $ = (selector) => document.querySelector(selector);
   const el = (tag, className, html) => {
@@ -30,6 +37,14 @@
     });
   }
 
+  function applyTheme() {
+    const isLight = themeState.value === "light";
+    document.documentElement.dataset.theme = themeState.value;
+    themeToggle?.setAttribute("aria-pressed", String(isLight));
+    themeToggle?.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
+    if (themeLabel) themeLabel.textContent = isLight ? "🔆" : "🌙";
+  }
+
   function renderNav(langPack) {
     $("#brand-text").textContent = langPack.brand;
     $("#nav-about").textContent = langPack.nav.about;
@@ -41,7 +56,6 @@
   }
 
   function renderHero(langPack) {
-    $("#hero-eyebrow").textContent = langPack.hero.eyebrow;
     $("#hero-title").innerHTML = escapeHtml(langPack.hero.title).replace(
       escapeHtml(langPack.hero.titleAccent),
       `<span>${escapeHtml(langPack.hero.titleAccent)}</span>`
@@ -50,9 +64,8 @@
     $("#hero-primary").textContent = langPack.hero.primaryBtn;
     $("#hero-secondary").textContent = langPack.hero.secondaryBtn;
     $("#hero-cv").textContent = langPack.hero.cvBtn;
-    $("#summary-mini").textContent = langPack.hero.sideMini;
+
     $("#summary-role").textContent = langPack.hero.sideRole;
-    $("#summary-desc").textContent = langPack.hero.sideDesc;
 
     const tagWrap = $("#hero-tags");
     tagWrap.innerHTML = "";
@@ -69,14 +82,14 @@
     wrap.innerHTML = "";
     data.stats.forEach((item) => {
       const card = el("div", "stat");
-      card.innerHTML = `<strong>${escapeHtml(item.value)}</strong><span>${escapeHtml(item.label[state.lang])}</span>`;
+      const value = typeof item.value === "object" ? item.value[state.lang] : item.value;
+      card.innerHTML = `<strong>${escapeHtml(value)}</strong><span>${escapeHtml(item.label[state.lang])}</span>`;
       wrap.appendChild(card);
     });
   }
 
   function renderListCard(rootId, section) {
     const root = $(rootId);
-    root.querySelector(".eyebrow").textContent = section.eyebrow;
     root.querySelector("h2").textContent = section.title;
     const text = root.querySelector("p");
     if (text) text.textContent = section.text || "";
@@ -86,9 +99,7 @@
   }
 
   function renderExperience(langPack) {
-    $("#experience-eyebrow").textContent = langPack.experience.eyebrow;
     $("#experience-title").textContent = langPack.experience.title;
-    $("#experience-text").textContent = langPack.experience.text;
     const wrap = $("#experience-list");
     wrap.innerHTML = "";
     langPack.experience.items.forEach((item) => {
@@ -106,9 +117,7 @@
   }
 
   function renderSkills(langPack) {
-    $("#skills-eyebrow").textContent = langPack.skills.eyebrow;
     $("#skills-title").textContent = langPack.skills.title;
-    $("#skills-text").textContent = langPack.skills.text;
     const wrap = $("#skills-list");
     wrap.innerHTML = "";
     langPack.skills.groups.forEach((group) => {
@@ -120,9 +129,7 @@
   }
 
   function renderProjects(langPack) {
-    $("#projects-eyebrow").textContent = langPack.projects.eyebrow;
     $("#projects-title").textContent = langPack.projects.title;
-    $("#projects-text").textContent = langPack.projects.text;
     const wrap = $("#projects-list");
     wrap.innerHTML = "";
     langPack.projects.items.forEach((item) => {
@@ -139,9 +146,7 @@
   }
 
   function renderCerts(langPack) {
-    $("#certs-eyebrow").textContent = langPack.certifications.eyebrow;
     $("#certs-title").textContent = langPack.certifications.title;
-    $("#certs-text").textContent = langPack.certifications.text;
     const wrap = $("#certs-list");
     wrap.innerHTML = "";
     langPack.certifications.items.forEach((item) => {
@@ -162,9 +167,7 @@
   }
 
   function renderContact(langPack) {
-    $("#contact-eyebrow").textContent = langPack.contact.eyebrow;
     $("#contact-title").textContent = langPack.contact.title;
-    $("#contact-text").textContent = langPack.contact.text;
 
     const labels = langPack.contact.labels;
     $("#contact-email-label").textContent = labels.email;
@@ -186,7 +189,7 @@
     $("#label-email").textContent = labels.formEmail;
     $("#label-message").textContent = labels.formMessage;
     $("#send-btn").textContent = labels.formButton;
-    $("#form-note").textContent = labels.note;
+    $("#form-note").textContent = labels.note || "";
 
     const form = $("#contact-form");
     form.action = data.config.formAction || "";
@@ -209,7 +212,7 @@
   }
 
   function renderFooter(langPack) {
-    $("#footer-text").textContent = `© ${langPack.brand}. ${langPack.footer}03/2026`;
+    $("#footer-text").textContent = `©️ ${langPack.brand}. ${langPack.footer}05/2026`;
   }
 
   function renderEverything() {
@@ -229,10 +232,31 @@
     renderFooter(langPack);
   }
 
+  function closeMenu() {
+    document.body.classList.remove("menu-open");
+    menuToggle?.setAttribute("aria-expanded", "false");
+  }
+
+  menuToggle?.addEventListener("click", () => {
+    const isOpen = document.body.classList.toggle("menu-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  themeToggle?.addEventListener("click", () => {
+    themeState.value = themeState.value === "dark" ? "light" : "dark";
+    localStorage.setItem("portfolio-theme", themeState.value);
+    applyTheme();
+  });
+
+  navSide?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
   document.querySelectorAll(".lang-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       state.lang = btn.dataset.lang;
       renderEverything();
+      closeMenu();
     });
   });
 
@@ -257,5 +281,6 @@
   });
   profileImage.src = data.config.profileImage;
 
+  applyTheme();
   renderEverything();
 })();

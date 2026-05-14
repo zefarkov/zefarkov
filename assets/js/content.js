@@ -14,233 +14,126 @@ window.PORTFOLIO_DATA = {
     }
   },
   stats: [
-  {
-  value: "3+",
-  label: {
-  en: "Years of IT Infrastructure Experience",
-  ru: "Лет опыта в IT-инфраструктуре",
-  uz: "IT infratuzilma bo‘yicha tajriba"
-  }
-  },
-  {
-  value: "CCNA",
-  label: {
-  en: "Cisco Certified Network Associate",
-  ru: "Сертифицированный специалист Cisco",
-  uz: "Cisco sertifikati"
-  }
-  },
-  {
-  value: "100+",
-  label: {
-  en: "Users Supported",
-  ru: "Поддержка пользователей",
-  uz: "Foydalanuvchiga xizmat"
-  }
-  },
-  {
-  value: "3",
-  label: {
-  en: "Languages: Uzbek • Russian • English",
-  ru: "Языки: Узбекский • Русский • Английский",
-  uz: "Tillar: O‘zbek • Rus • Ingliz"
-  }
-  }
+    {
+      value: { en: "Since 2018", ru: "С 2018", uz: "2018 yildan" },
+      label: {
+        en: "7+ years building IT infrastructure",
+        ru: "7+ лет в IT-инфраструктуре",
+        uz: "IT-infratuzilma sohasida 7+ yil"
+      }
+    },
+    {
+      value: "CCNA",
+      label: {
+        en: "Cisco Certified Network Associate",
+        ru: "Cisco Certified Network Associate",
+        uz: "Cisco Certified Network Associate"
+      }
+    },
+    {
+      value: "300+",
+      label: {
+        en: "Users supported reliably",
+        ru: "Надежная поддержка пользователей",
+        uz: "Foydalanuvchilarni ishonchli qo‘llab-quvvatlash"
+      }
+    },
+    {
+      value: "3",
+      label: {
+        en: "Languages: Uzbek, Russian, English",
+        ru: "Языки: узбекский, русский, английский",
+        uz: "Tillar: o‘zbek, rus, ingliz"
+      }
+    }
   ],
   languages: {
     en: {
       metaTitle: "Farrukh Abdurazzokov | Network Engineer",
-      metaDescription: "Personal website of Farrukh Abdurazzokov - network engineer, systems administrator, and IT infrastructure specialist.",
+      metaDescription: "Network and infrastructure engineer: Cisco, MikroTik, Linux, Windows Server, monitoring, VPN, and business IT operations.",
       brand: "Farrukh Abdurazzokov",
       nav: {
-        about: "About",
+        about: "Profile",
         experience: "Experience",
-        skills: "Skills",
-        projects: "Projects",
-        certifications: "Certifications",
+        skills: "Stack",
+        projects: "Work",
+        certifications: "Certs",
         contact: "Contact"
       },
       hero: {
-        eyebrow: "Network Engineering • Systems • Infrastructure",
-
-        title: "I build reliable IT infrastructure for business.",
-        titleAccent: "reliable IT infrastructure",
-
-        text: "Network and infrastructure engineer focused on stable systems, clear architecture, and practical IT operations that support real business environments.",
-
-        primaryBtn: "Contact Me",
-        secondaryBtn: "View Experience",
+        title: "I keep infrastructure stable under pressure.",
+        titleAccent: "stable under pressure",
+        text: "I build and maintain reliable IT infrastructure that keeps businesses running.",
+        primaryBtn: "Contact",
+        secondaryBtn: "Experience",
         cvBtn: "Download CV",
-
-        tags: [
-        "Cisco",
-        "MikroTik",
-        "Infrastructure Reliability",
-        "Network Architecture",
-        "IT Operations",
-        "Business IT Systems"
-        ],
-
-        sideMini: "Summary",
+        tags: ["Cisco", "MikroTik", "VLAN / Routing", "Linux / Windows Server", "Zabbix", "VPN / Firewall"],
         sideRole: "Network & Infrastructure Engineer",
-        sideDesc: "Focused on building stable, maintainable infrastructure and supporting business operations through reliable IT systems."
       },
       about: {
-      eyebrow: "About Me",
-      title: "Infrastructure engineer focused on reliable business systems",
-      text: "I design, deploy, and maintain reliable IT infrastructure. My focus is keeping networks stable, systems understandable, and support practical for real business environments. Interested in infrastructure leadership and system reliability at scale.",
-      points: [
-      "NetNetwork infrastructure: routing, switching, LAN/WAN design and configuration",
-      "System administration and monitoring for stable operations",
-      "Clear documentation and maintainable IT environments"
-      ]
+        title: "Practical engineer for real infrastructure",
+        text: "No fluff. I build and maintain networks, servers, monitoring, access control, and support processes.",
+        points: [
+          "Routing, switching, VLANs, LAN/WAN, Wi-Fi, MikroTik, Cisco",
+          "Linux, Windows Server, Proxmox, Zabbix, backup and alerts",
+          "Access policies, CCTV, VPN, user support, documentation"
+        ]
       },
       value: {
-        eyebrow: "Core Value",
-        title: "What I bring",
+        title: "Low ego. High ownership.",
         points: [
-          "Structured technical thinking and clear problem analysis",
-          "Fast adaptation to new tools, systems, and environments",
-          "Hands-on troubleshooting and practical problem solving",
-          "Clear communication between technical teams and business users",
-          "Focus on reliability, maintainability, and stable operations"
+          "I turn unclear problems into working systems",
+          "I document my work so others can maintain it",
+          "I handle users, vendors and equipment",
+          "I learn fast, fix carefully, and escalate honestly",
+          "I treat uptime as a responsibility, not a slogan"
         ]
       },
       experience: {
-        eyebrow: "Experience",
-        title: "Work history",
+        title: "Where I have carried responsibility",
         items: [
-          {
-            date: "Jan 2026 - Present",
-            role: "Infrastructure Engineer",
-            company: "BitStream",
-            description: "Responsible for designing and deploying business IT infrastructure including network architecture, system administration, and security systems. Focused on building stable and maintainable environments for business operations."
-          },
-          {
-            date: "March 2024 - Jul 2025",
-            role: "Chief Network Engineer",
-            company: "MoreITdesign",
-            description: "Lead network and infrastructure work, including security systems, video surveillance, access policies, and coordination of workers during task execution."
-          },
-          {
-            date: "May 2024 - Jan 2026",
-            role: "IT Specialist",
-            company: "ABDULLOX MIG FOOD",
-            description: "Manage and configure server equipment and support business IT operations."
-          },
-          {
-            date: "Sep 2023 - Apr 2024",
-            role: "System Administrator",
-            company: "Idea Consulting And Communication Group",
-            description: "Maintained office computer infrastructure, information security, data handling, access policy management, and security systems."
-          },
-          {
-            date: "Nov 2022 - Nov 2023",
-            role: "System Administrator",
-            company: "Profi University",
-            description: "Ensured stable work of office computers across branches, managed access control, and coordinated with partner companies."
-          },
-          {
-            date: "Sep 2022 - Oct 2022",
-            role: "Engineer-Laboratory Assistant",
-            company: "Tashkent University of Information Technologies",
-            description: "Maintained faculty computer systems, handled equipment responsibility, and supported exam process operations."
-          }
+          { date: "Jan 2026 - Present", role: "Infrastructure Engineer", company: "BITSTREAM", description: "Designing and deploying business infrastructure: networks, servers, security systems, documentation, and operational reliability." },
+          { date: "Mar 2024 - Jul 2025", role: "Chief Network Engineer", company: "MoreITdesign", description: "Led network and security-system work: CCTV, access policies, on-site coordination, and infrastructure delivery." },
+          { date: "May 2024 - Jan 2026", role: "IT Specialist", company: "ABDULLOX MIG FOOD", description: "Managed server equipment and supported daily business IT operations." },
+          { date: "Sep 2023 - Apr 2024", role: "System Administrator", company: "Idea Consulting And Communication Group", description: "Maintained office infrastructure, data handling, access policies, information security, and security systems." },
+          { date: "Nov 2022 - Nov 2023", role: "System Administrator", company: "Profi University", description: "Supported branch office computers, access control, partner coordination, and user operations." },
+          { date: "Sep 2022 - Oct 2022", role: "Engineer-Laboratory Assistant", company: "Tashkent University of Information Technologies", description: "Maintained faculty systems, equipment accountability, and exam process support." }
         ]
       },
       skills: {
-        eyebrow: "Skills",
-        title: "Technical expertise and operational areas",
+        title: "Tools I can be trusted with",
         groups: [
-          {
-            title: "Network Infrastructure",
-            items: ["Cisco", "MikroTik", "TCP/IP", "Routing & Switching", "LAN/WAN", "Wi-Fi Networks"]
-          },
-          {
-            title: "Systems Administration",
-            items: ["Linux", "Windows", "Windows Server", "Server Deployment", "System Administration"]
-          },
-          {
-            title: "Infrastructure Security",
-            items: ["Video Surveillance Systems", "Access Control Systems", "Information Security", "Access Policies"]
-          },
-          {
-            title: "IT Operations",
-            items: ["Infrastructure Support", "Troubleshooting", "Incident Resolution", "System Maintenance"]
-          },
-          {
-            title: "Business IT Support",
-            items: ["User Support", "Hardware Deployment", "Office IT Infrastructure"]
-          },
-          {
-            title: "Tools & Diagnostics",
-            items: ["Network Diagnostics", "Infrastructure Monitoring", "Python (Basic)"]
-          }
+          { title: "Network", items: ["Cisco", "MikroTik", "TCP/IP", "Routing", "Switching", "VLAN", "LAN/WAN", "Wi-Fi"] },
+          { title: "Systems", items: ["Linux", "Windows", "Windows Server", "Proxmox", "Server deployment", "Services"] },
+          { title: "Security", items: ["VPN", "Firewall policy", "Access control", "CCTV", "Segmentation", "User access"] },
+          { title: "Operations", items: ["Troubleshooting", "Incident handling", "Documentation", "User support", "Vendor coordination"] },
+          { title: "Monitoring", items: ["Zabbix", "Telegram alerts", "Backup checks", "Network diagnostics", "Health visibility"] },
+          { title: "Automation", items: ["Python basics", "Scripts", "Automation thinking", "CLI comfort"] }
         ]
       },
       projects: {
-        eyebrow: "Projects",
-        title: "Selected infrastructure projects",
+        title: "Selected Infrastructure Projects",
         items: [
-          {
-            title: "Azure Resort Network Infrastructure",
-            badge: "Infrastructure",
-            text: "Designed and deployed full network infrastructure for a resort environment including MikroTik routing, VLAN segmentation, firewall policies, QoS, and UniFi access points for distributed wireless coverage."
-          },
-          {
-            title: "Server & Virtualization Infrastructure",
-            badge: "Servers",
-            text: "Deployed Proxmox virtualization platform with Linux services and Windows Server environments supporting business systems including PMS infrastructure."
-          },
-          {
-            title: "Infrastructure Monitoring & Automation",
-            badge: "Monitoring",
-            text: "Implemented Zabbix monitoring on Linux with automated Telegram alerting and custom notification bots for infrastructure visibility and incident awareness."
-          },
-          {
-            title: "Secure Remote Access Infrastructure",
-            badge: "Security",
-            text: "Implemented VPN-based remote desktop access for key staff with firewall policies and controlled network access."
-          },
-          {
-            title: "Security & Surveillance Systems",
-            badge: "Security",
-            text: "Designed and deployed CCTV infrastructure, access policies, and network segmentation for secure operational environments."
-          },
-          {
-            title: "Backup & Reliability Systems",
-            badge: "Reliability",
-            text: "Implemented backup systems with monitoring and Telegram alerts to ensure system reliability and operational continuity."
-          }
+          { title: "Azure Resort Network", badge: "Network", text: "Built resort network: MikroTik routing, VLANs, firewall policy, QoS, and UniFi wireless coverage." },
+          { title: "Server & Virtualization", badge: "Servers", text: "Deployed Proxmox with Linux services and Windows Server environments for business systems." },
+          { title: "Monitoring & Alerts", badge: "Zabbix", text: "Implemented Zabbix on Linux with Telegram alerting and notification bots." },
+          { title: "Secure Remote Access", badge: "VPN", text: "Built VPN-based remote access with firewall rules and controlled access paths." },
+          { title: "Security Systems", badge: "CCTV", text: "Designed CCTV, access policies, and segmentation for secure operations." },
+          { title: "Backup Reliability", badge: "Backup", text: "Implemented backups with monitoring and Telegram alerts." }
         ]
       },
       certifications: {
-        eyebrow: "Certifications",
-        title: "Professional development",
+        title: "Certificates and training",
         items: [
-          {
-            title: "CCNA",
-            badge: "Cisco",
-            image: "assets/images/ccna.jpg",
-            text: "Cisco Certified Network Associate. Networking, routing, switching, and enterprise infrastructure fundamentals."
-          },
-          {
-            title: "LPIC-1",
-            badge: "Linux",
-            image: "assets/images/lpic-1.jpeg",
-            text: "Linux Professional Institute Certification Level 1. Linux system administration, server environments, and infrastructure operations."
-          },
-          {
-            title: "ZCS",
-            badge: "Monitoring",
-            image: "assets/images/zabbix.webp",
-            text: "Infrastructure monitoring, alerting systems, and operational visibility using Zabbix."
-          }
+          { title: "CCNA", badge: "Cisco", image: "assets/images/ccna.jpg", text: "Routing, switching, enterprise networking, and infrastructure fundamentals." },
+          { title: "LPIC-1", badge: "Linux", image: "assets/images/lpic-1.jpeg", text: "Linux administration, server environments, shell, packages, users, and services." },
+          { title: "ZCS", badge: "Monitoring", image: "assets/images/zabbix.webp", text: "Monitoring, alerting, incident visibility, and infrastructure health." }
         ]
       },
       contact: {
         eyebrow: "Contact",
         title: "Contact Me",
+        text: "For infrastructure, network, system administration, or IT operations roles.",
         labels: {
           email: "Email",
           phone: "Phone",
@@ -252,204 +145,96 @@ window.PORTFOLIO_DATA = {
           formEmail: "Email",
           formMessage: "Message",
           formButton: "Send Message",
+          note: "Direct, serious messages only."
         }
       },
       footer: "Last updated: "
     },
     ru: {
       metaTitle: "Фаррух Абдураззоков | Сетевой инженер",
-      metaDescription: "Персональный сайт Фарруха Абдураззокова - сетевого инженера, системного администратора и IT-специалиста.",
+      metaDescription: "Сетевой инженер и инженер инфраструктуры: Cisco, MikroTik, Linux, Windows Server, мониторинг, VPN и поддержка бизнес-IT.",
       brand: "Фаррух Абдураззоков",
       nav: {
-        about: "Обо мне",
+        about: "Профиль",
         experience: "Опыт",
-        skills: "Навыки",
-        projects: "Проекты",
+        skills: "Стек",
+        projects: "Работы",
         certifications: "Сертификаты",
         contact: "Контакты"
       },
       hero: {
-        eyebrow: "Сети • Системы • IT-инфраструктура",
-
-        title: "Создаю надёжную IT-инфраструктуру для бизнеса.",
-        titleAccent: "надёжную IT-инфраструктуру",
-
-        text: "Инженер сетей и IT-инфраструктуры, ориентированный на стабильность систем, понятную архитектуру и практичную эксплуатацию IT в бизнес-среде.",
-
+        title: "Держу инфраструктуру стабильной под нагрузкой.",
+        titleAccent: "стабильной под нагрузкой",
+        text: "Строю и поддерживаю надежную IT-инфраструктуру, чтобы бизнес работал без лишних простоев.",
         primaryBtn: "Связаться",
-        secondaryBtn: "Посмотреть опыт",
+        secondaryBtn: "Опыт",
         cvBtn: "Скачать CV",
-
-        tags: [
-        "Cisco",
-        "MikroTik",
-        "Infrastructure Reliability",
-        "Network Architecture",
-        "IT Operations",
-        "Business IT Systems"
-        ],
-
-
-        sideMini: "Кратко",
-        sideRole: "Инженер сетей и инфраструктуры",
-        sideDesc: "Фокус на создании стабильной и поддерживаемой инфраструктуры и обеспечении надёжной работы IT-систем для бизнеса."
+        tags: ["Cisco", "MikroTik", "VLAN / Routing", "Linux / Windows Server", "Zabbix", "VPN / Firewall"],
+        sideRole: "Сетевой инженер / инженер инфраструктуры"
       },
       about: {
-        eyebrow: "Обо мне",
-        title: "Инженер IT-инфраструктуры и сетевик с фокусом на стабильность",
-        text: "Я проектирую, внедряю и поддерживаю надёжную IT-инфраструктуру. Мой фокус — стабильность сетей, понятность систем и практичная поддержка для реальных бизнес-сред. Интересуюсь управлением инфраструктурой и обеспечением надёжности систем на масштабном уровне.",
+        title: "Практичный инженер для реальной инфраструктуры",
+        text: "Без лишних слов: сети, серверы, мониторинг, контроль доступа и процессы поддержки — всё, что должно работать каждый день.",
         points: [
-          "Сетевая инфраструктура: маршрутизация, коммутаторы, настройка LAN/WAN",
-          "Системное администрирование и мониторинг для стабильной работы",
-          "Понятная документация и поддерживаемая IT-среда"
+          "Маршрутизация, коммутация, VLAN, LAN/WAN, Wi-Fi, MikroTik, Cisco",
+          "Linux, Windows Server, Proxmox, Zabbix, резервные копии и оповещения",
+          "Политики доступа, CCTV, VPN, поддержка пользователей, документация"
         ]
       },
       value: {
-        eyebrow: "Ценность",
-        title: "Что я привношу",
+        title: "Меньше слов. Больше дел.",
         points: [
-          "Структурное техническое мышление и анализ проблем",
-          "Быстрая адаптация к новым инструментам и системам",
-          "Практическое устранение неисправностей и решение проблем",
-          "Понятная коммуникация между IT и бизнесом",
-          "Фокус на стабильности и поддерживаемости систем"
+          "Разбираю неясные задачи и довожу их до рабочего решения",
+          "Документирую работу так, чтобы систему можно было поддерживать дальше",
+          "Умею работать с пользователями, подрядчиками и оборудованием",
+          "Быстро учусь, чиню аккуратно и честно поднимаю вопрос выше, когда нужно",
+          "Воспринимаю uptime как ответственность, а не красивое слово"
         ]
       },
       experience: {
-        eyebrow: "Опыт",
-        title: "История работы",
+        title: "Где я отвечал за результат",
         items: [
-        {
-        date: "Январь 2026 — настоящее время",
-        role: "Инженер IT-инфраструктуры",
-        company: "BitStream",
-        description: "Проектирование и внедрение IT-инфраструктуры для бизнеса, включая сетевую архитектуру, системное администрирование и системы безопасности. Фокус на создании стабильных и поддерживаемых IT-сред для рабочих процессов компании."
-        },
-        {
-        date: "Март 2024 — Июль 2025",
-        role: "Главный сетевой инженер",
-        company: "MoreITdesign",
-        description: "Руководство работами по сетевой и инфраструктурной части, включая системы безопасности, видеонаблюдение, политики доступа и координацию технических специалистов при выполнении проектов."
-        },
-        {
-        date: "Май 2024 — Январь 2026",
-        role: "IT-специалист",
-        company: "ABDULLOX MIG FOOD",
-        description: "Администрирование серверного оборудования, настройка и поддержка IT-инфраструктуры компании, обеспечение стабильной работы бизнес-систем."
-        },
-        {
-        date: "Сентябрь 2023 — Апрель 2024",
-        role: "Системный администратор",
-        company: "Idea Consulting And Communication Group",
-        description: "Поддержка офисной компьютерной инфраструктуры, обеспечение информационной безопасности, управление доступом и сопровождение систем безопасности."
-        },
-        {
-        date: "Ноябрь 2022 — Ноябрь 2023",
-        role: "Системный администратор",
-        company: "Profi University",
-        description: "Обеспечение стабильной работы компьютерной инфраструктуры филиалов, управление доступом пользователей и взаимодействие с партнёрскими компаниями."
-        },
-        {
-        date: "Сентябрь 2022 — Октябрь 2022",
-        role: "Инженер-лаборант",
-        company: "Ташкентский университет информационных технологий",
-        description: "Поддержка компьютерных систем факультета, ответственность за оборудование лаборатории и техническое сопровождение экзаменационных процессов."
-        }
+          { date: "Янв 2026 — настоящее время", role: "Инженер инфраструктуры", company: "BITSTREAM", description: "Проектирование и внедрение бизнес-инфраструктуры: сети, серверы, системы безопасности, документация и стабильная эксплуатация." },
+          { date: "Март 2024 — Июль 2025", role: "Главный сетевой инженер", company: "MoreITdesign", description: "Вел сетевые и security-проекты: CCTV, политики доступа, координация на объекте и сдача инфраструктуры в работу." },
+          { date: "Май 2024 — Янв 2026", role: "IT-специалист", company: "ABDULLOX MIG FOOD", description: "Администрировал серверное оборудование и поддерживал ежедневные IT-процессы бизнеса." },
+          { date: "Сент 2023 — Апр 2024", role: "Системный администратор", company: "Idea Consulting And Communication Group", description: "Поддерживал офисную инфраструктуру, работу с данными, политики доступа, информационную безопасность и системы безопасности." },
+          { date: "Нояб 2022 — Нояб 2023", role: "Системный администратор", company: "Profi University", description: "Поддерживал компьютеры филиалов, контроль доступа, взаимодействие с партнерами и пользовательские операции." },
+          { date: "Сент 2022 — Окт 2022", role: "Инженер-лаборант", company: "Ташкентский университет информационных технологий", description: "Поддерживал системы факультета, отвечал за оборудование лаборатории и техническое сопровождение экзаменационных процессов." }
         ]
       },
       skills: {
-        eyebrow: "Навыки",
-        title: "Технический стек и рабочие области",
+        title: "Технологии, с которыми я работаю",
         groups: [
-          {
-            title: "Сетевая инфраструктура",
-            items: ["Cisco", "MikroTik", "TCP/IP", "Маршрутизация и коммутация", "LAN/WAN", "Wi-Fi сети"]
-          },
-          {
-            title: "Системное администрирование",
-            items: ["Linux", "Windows", "Windows Server", "Развёртывание серверов", "Администрирование систем"]
-          },
-          {
-            title: "Инфраструктурная безопасность",
-            items: ["Системы видеонаблюдения", "Системы контроля доступа", "Информационная безопасность", "Политики доступа"]
-          },
-          {
-            title: "IT-операции",
-            items: ["Поддержка инфраструктуры", "Устранение неисправностей", "Решение инцидентов", "Обслуживание систем"]
-          },
-          {
-            title: "Поддержка бизнес-IT",
-            items: ["Поддержка пользователей", "Развёртывание оборудования", "Офисная IT-инфраструктура"]
-          },
-          {
-            title: "Инструменты и диагностика",
-            items: ["Сетевая диагностика", "Мониторинг инфраструктуры", "Python (базовый)"]
-          }
+          { title: "Сети", items: ["Cisco", "MikroTik", "TCP/IP", "Routing", "Switching", "VLAN", "LAN/WAN", "Wi-Fi"] },
+          { title: "Системы", items: ["Linux", "Windows", "Windows Server", "Proxmox", "Развертывание серверов", "Сервисы"] },
+          { title: "Безопасность", items: ["VPN", "Firewall policy", "Контроль доступа", "CCTV", "Сегментация", "Доступ пользователей"] },
+          { title: "Операции", items: ["Troubleshooting", "Инциденты", "Документация", "Поддержка пользователей", "Координация подрядчиков"] },
+          { title: "Мониторинг", items: ["Zabbix", "Telegram-оповещения", "Проверка бэкапов", "Сетевая диагностика", "Контроль состояния"] },
+          { title: "Автоматизация", items: ["Python basics", "Скрипты", "Автоматизационное мышление", "Уверенная работа в CLI"] }
         ]
       },
       projects: {
-        eyebrow: "Проекты",
-        title: "Выбранные инфраструктурные проекты",
+        title: "Выбранные инфраструктурные работы",
         items: [
-          {
-            title: "Сетевая инфраструктура Azure Resort",
-            badge: "Инфраструктура",
-            text: "Спроектирована и развернута сеть для курортного комплекса: маршрутизация на MikroTik, сегментация VLAN, политики firewall, QoS и беспроводная сеть на базе UniFi."
-          },
-          {
-            title: "Серверная и виртуализационная инфраструктура",
-            badge: "Серверы",
-            text: "Развернута платформа виртуализации Proxmox с Linux-сервисами и Windows Server для бизнес-систем, включая PMS-систему управления."
-          },
-          {
-            title: "Мониторинг инфраструктуры и автоматизация",
-            badge: "Мониторинг",
-            text: "Внедрен мониторинг Zabbix на Linux с автоматическими уведомлениями в Telegram и ботами для контроля состояния инфраструктуры."
-          },
-          {
-            title: "Безопасный удалённый доступ",
-            badge: "Безопасность",
-            text: "Настроен VPN-доступ для удалённой работы ключевых сотрудников с контролем сетевого доступа через firewall."
-          },
-          {
-            title: "Системы безопасности и видеонаблюдения",
-            badge: "Безопасность",
-            text: "Спроектированы и внедрены системы видеонаблюдения, политики доступа и сегментация сети для повышения безопасности инфраструктуры."
-          },
-          {
-            title: "Системы резервного копирования",
-            badge: "Надёжность",
-            text: "Настроены системы резервного копирования с мониторингом и Telegram-уведомлениями для обеспечения надёжности инфраструктуры."
-          }
+          { title: "Сеть Azure Resort", badge: "Сеть", text: "Построил сеть курортного объекта: маршрутизация MikroTik, VLAN, firewall-политики, QoS и Wi-Fi-покрытие на UniFi." },
+          { title: "Серверы и виртуализация", badge: "Серверы", text: "Развернул Proxmox, Linux-сервисы и Windows Server-среды для бизнес-систем." },
+          { title: "Мониторинг и алерты", badge: "Zabbix", text: "Внедрил Zabbix на Linux с Telegram-оповещениями и ботами уведомлений." },
+          { title: "Безопасный удаленный доступ", badge: "VPN", text: "Настроил VPN-доступ с firewall-правилами и контролируемыми маршрутами доступа." },
+          { title: "Системы безопасности", badge: "CCTV", text: "Проектировал CCTV, политики доступа и сегментацию сети для безопасной эксплуатации." },
+          { title: "Надежность бэкапов", badge: "Backup", text: "Внедрил резервное копирование с мониторингом и Telegram-оповещениями." }
         ]
       },
-        certifications: {
-          eyebrow: "Сертификаты",
-          title: "Профессиональное развитие",
-          items: [
-            {
-              title: "CCNA",
-              badge: "Cisco",
-              image: "assets/images/ccna.jpg",
-              text: "Cisco Certified Network Associate. Основы сетевых технологий, маршрутизации, коммутации и корпоративной сетевой инфраструктуры."
-            },
-            {
-              title: "LPIC-1",
-              badge: "Linux",
-              image: "assets/images/lpic-1.jpeg",
-              text: "Linux Professional Institute Certification Level 1. Администрирование Linux, серверные среды и эксплуатация инфраструктуры."
-            },
-            {
-              title: "ZCS",
-              badge: "Мониторинг",
-              image: "assets/images/zabbix.webp",
-              text: "Мониторинг инфраструктуры, системы оповещений и контроль состояния IT-систем с использованием Zabbix."
-            }
-          ]
-        },
+      certifications: {
+        title: "Сертификаты и обучение",
+        items: [
+          { title: "CCNA", badge: "Cisco", image: "assets/images/ccna.jpg", text: "Маршрутизация, коммутация, корпоративные сети и основы инфраструктуры." },
+          { title: "LPIC-1", badge: "Linux", image: "assets/images/lpic-1.jpeg", text: "Администрирование Linux: серверные среды, shell, пакеты, пользователи и сервисы." },
+          { title: "ZCS", badge: "Monitoring", image: "assets/images/zabbix.webp", text: "Мониторинг, оповещения, видимость инцидентов и состояние инфраструктуры." }
+        ]
+      },
       contact: {
-        eyebrow: "Контакты",
-        title: "Для связи:",
+        title: "Связаться со мной",
+        text: "Для ролей по инфраструктуре, сетям, системному администрированию и IT-операциям.",
         labels: {
           email: "Email",
           phone: "Телефон",
@@ -460,205 +245,97 @@ window.PORTFOLIO_DATA = {
           formName: "Имя",
           formEmail: "Email",
           formMessage: "Сообщение",
-          formButton: "Отправить сообщение",
+          formButton: "Отправить",
+          note: "Пишите по делу — отвечу напрямую."
         }
       },
-      footer: "Последнее обновление: "
+      footer: "Обновлено: "
     },
     uz: {
-      metaTitle: "Farrukh Abdurazzokov | Tarmoq muhandisi",
-      metaDescription: "Farrukh Abdurazzokovning shaxsiy sayti - tarmoq muhandisi, sistem administrator va IT infratuzilma mutaxassisi.",
+      metaTitle: "Farrux Abdurazzoqov | Tarmoq muhandisi",
+      metaDescription: "Tarmoq va IT-infratuzilma muhandisi: Cisco, MikroTik, Linux, Windows Server, monitoring, VPN va biznes IT operatsiyalari.",
       brand: "Farrux Abdurazzoqov",
       nav: {
-        about: "Men haqimda",
+        about: "Profil",
         experience: "Tajriba",
-        skills: "Ko'nikmalar",
-        projects: "Loyihalar",
+        skills: "Stek",
+        projects: "Ishlar",
         certifications: "Sertifikatlar",
         contact: "Aloqa"
       },
       hero: {
-        eyebrow: "Tarmoq • Tizimlar • IT infratuzilma",
-
-        title: "Biznes uchun ishonchli IT infratuzilma yarataman.",
-        titleAccent: "ishonchli IT infratuzilma",
-
-        text: "Barqaror tizimlar, aniq arxitektura va real biznes muhitlari uchun amaliy IT operatsiyalariga yo‘naltirilgan tarmoq va infratuzilma muhandisi.",
-
+        title: "Bosim ostida ham tizimlar barqaror ishlashini ta’minlayman.",
+        titleAccent: "barqaror ishlashini",
+        text: "Biznes to‘xtab qolmasligi uchun ishonchli IT-infratuzilmani quraman va qo‘llab-quvvatlayman.",
         primaryBtn: "Bog‘lanish",
         secondaryBtn: "Tajriba",
         cvBtn: "CV yuklab olish",
-
-        tags: [
-        "Cisco",
-        "MikroTik",
-        "Infrastructure Reliability",
-        "Network Architecture",
-        "IT Operations",
-        "Business IT Systems"
-        ],
-
-
-        sideMini: "Qisqacha",
-        sideRole: "Tarmoq va infratuzilma muhandisi",
-        sideDesc: "Barqaror infratuzilma yaratish hamda biznes jarayonlarini IT tizimlar orqali ishonchli qo‘llab-quvvatlash."
+        tags: ["Cisco", "MikroTik", "VLAN / Routing", "Linux / Windows Server", "Zabbix", "VPN / Firewall"],
+        sideRole: "Tarmoq va infratuzilma muhandisi"
       },
       about: {
-        eyebrow: "Men haqimda",
-        title: "Barqaror tarmoq va IT infratuzilma muhandisi",
-        text: "Men ishonchli IT infratuzilma loyihalash, joriy qilish va qo‘llab-quvvatlash bilan shug‘ullanaman. Mening asosiy maqsadim — tarmoqlar barqarorligi, tizimlarning tushunarli bo‘lishi va real biznes muhitlari uchun amaliy texnik yordam. Katta miqyosdagi tizimlar va infratuzilma boshqaruviga qiziqaman",
+        title: "Real infratuzilma uchun amaliy muhandis",
+        text: "Ortiqcha gap yo‘q: tarmoqlar, serverlar, monitoring, kirish nazorati va support jarayonlari — har kuni ishlashi kerak bo‘lgan tizimlar.",
         points: [
-          "Tarmoq infratuzilmasi: routing, switching, LAN/WAN konfiguratsiyasi",
-          "Barqaror ishlash uchun tizimlarni boshqarish va monitoring",
-          "Tushunarli hujjatlar va qo‘llab-quvvatlashga qulay IT muhit"
+          "Routing, switching, VLAN, LAN/WAN, Wi-Fi, MikroTik, Cisco",
+          "Linux, Windows Server, Proxmox, Zabbix, backup va ogohlantirishlar",
+          "Kirish siyosatlari, CCTV, VPN, foydalanuvchi supporti, hujjatlashtirish"
         ]
       },
       value: {
-        eyebrow: "Asosiy qiymat",
-        title: "Men nima bera olaman",
+        title: "Mas'uliyatli yondashuv.",
         points: [
-          "Tizimli texnik fikrlash va muammolarni tahlil qilish",
-          "Yangi vositalar va tizimlarga tez moslashish",
-          "Amaliy muammo yechish va troubleshooting",
-          "IT mutaxassislar va biznes foydalanuvchilari o‘rtasida aniq aloqa",
-          "Barqaror va qo‘llab-quvvatlanadigan tizimlarga e’tibor"
+          "Har qanday muammoni tahlil qilib, ishlaydigan yechimgacha olib boraman",
+          "Ishni keyingi odam ham tushunib davom ettira oladigan qilib hujjatlashtiraman",
+          "Foydalanuvchi, pudratchi va inventarlar bilan ishlay olaman",
+          "O'rganuvchan, ehtiyotkor va foydali tomondan yondashaman",
+          "Tizimlar doim ishlab turishi mening mas'uliyatim"
         ]
       },
       experience: {
-        eyebrow: "Tajriba",
-        title: "Ish tarixi",
+        title: "Ish  joylarim",
         items: [
-        {
-        date: "Yanvar 2026 — hozirgacha",
-        role: "IT infratuzilma muhandisi",
-        company: "BitStream",
-        description: "Biznes uchun IT infratuzilmasini loyihalash va joriy etish, jumladan tarmoq arxitekturasi, tizim administratsiyasi va xavfsizlik tizimlari. Ish jarayonlari uchun barqaror va qo‘llab-quvvatlanadigan IT muhitlarini yaratishga yo‘naltirilgan."
-        },
-        {
-        date: "Mart 2024 — Iyul 2025",
-        role: "Bosh tarmoq muhandisi",
-        company: "MoreITdesign",
-        description: "Tarmoq va infratuzilma ishlari bo‘yicha rahbarlik, jumladan xavfsizlik tizimlari, videokuzatuv, kirish siyosatlari va loyiha bajarilishida texnik xodimlarni muvofiqlashtirish."
-        },
-        {
-        date: "May 2024 — Yanvar 2026",
-        role: "IT mutaxassisi",
-        company: "ABDULLOX MIG FOOD",
-        description: "Server uskunalarini boshqarish va sozlash, kompaniyaning IT infratuzilmasini qo‘llab-quvvatlash hamda biznes tizimlarining barqaror ishlashini ta’minlash."
-        },
-        {
-        date: "Sentabr 2023 — Aprel 2024",
-        role: "Tizim administratori",
-        company: "Idea Consulting And Communication Group",
-        description: "Ofis kompyuter infratuzilmasini qo‘llab-quvvatlash, axborot xavfsizligini ta’minlash, ma’lumotlar bilan ishlash va kirish siyosatlarini boshqarish."
-        },
-        {
-        date: "Noyabr 2022 — Noyabr 2023",
-        role: "Tizim administratori",
-        company: "Profi University",
-        description: "Filiallar bo‘ylab ofis kompyuter infratuzilmasining barqaror ishlashini ta’minlash, foydalanuvchilar uchun kirish nazoratini boshqarish va hamkor kompaniyalar bilan ishlash."
-        },
-        {
-        date: "Sentabr 2022 — Oktabr 2022",
-        role: "Muhandis-laborant",
-        company: "Toshkent axborot texnologiyalari universiteti",
-        description: "Fakultet kompyuter tizimlarini qo‘llab-quvvatlash, laboratoriya uskunalari uchun javobgarlik va imtihon jarayonlarini texnik ta’minlash."
-        }
+          { date: "Yan 2026 — hozirgacha", role: "Infratuzilma muhandisi", company: "BITSTREAM", description: "Biznes infratuzilmasini loyihalash va joriy etish: tarmoqlar, serverlar, xavfsizlik tizimlari, hujjatlar." },
+          { date: "Mart 2024 — Iyul 2025", role: "Bosh tarmoq muhandisi", company: "MoreITdesign", description: "Tarmoq va xavfsizlik tizimlari bo‘yicha ishlarni olib bordim: CCTV, kirish siyosatlari, obyekt koordinatsiyasi va infratuzilmani ishga topshirish." },
+          { date: "May 2024 — Yan 2026", role: "IT mutaxassisi", company: "ABDULLOX MIG FOOD", description: "Server uskunalarini boshqardim va kundalik biznes IT jarayonlarini qo‘llab-quvvatladim." },
+          { date: "Sent 2023 — Apr 2024", role: "Tizim administratori", company: "Idea Consulting And Communication Group", description: "Ofis infratuzilmasi, ma'lumotlar bilan ishlash, kirish siyosatlari, axborot xavfsizligi va xavfsizlik tizimlarini qo‘llab-quvvatladim." },
+          { date: "Noy 2022 — Noy 2023", role: "Tizim administratori", company: "Profi University", description: "Filial kompyuterlari, kirish nazorati, hamkorlar bilan koordinatsiya va foydalanuvchi jarayonlarini qo‘llab-quvvatladim." },
+          { date: "Sent 2022 — Okt 2022", role: "Muhandis-laborant", company: "Toshkent axborot texnologiyalari universiteti", description: "Fakultet tizimlarini qo‘llab-quvvatladim, laboratoriya uskunalari uchun javob berdim va imtihon jarayonlarini texnik ta'minladim." }
         ]
       },
       skills: {
-        eyebrow: "Ko‘nikmalar",
-        title: "Texnik tajriba va ish yo‘nalishlari",
+        title: "Ishlaydigan texnologiyalarim",
         groups: [
-          {
-            title: "Tarmoq infratuzilmasi",
-            items: ["Cisco", "MikroTik", "TCP/IP", "Routing va Switching", "LAN/WAN", "Wi-Fi tarmoqlari"]
-          },
-          {
-            title: "Tizim administratsiyasi",
-            items: ["Linux", "Windows", "Windows Server", "Server ko'tarish", "Tizim administratsiya"]
-          },
-          {
-            title: "Infratuzilma xavfsizligi",
-            items: ["Videokuzatuv tizimlari", "Kirish nazorati tizimlari", "Axborot xavfsizligi", "Access policy"]
-          },
-          {
-            title: "IT operatsiyalari",
-            items: ["Infratuzilmani qo‘llab-quvvatlash", "Nosozliklarni aniqlash", "Muammolarni hal qilish"]
-          },
-          {
-            title: "Biznes IT qo‘llab-quvvatlash",
-            items: ["Foydalanuvchilarni qo‘llab-quvvatlash", "Uskunalarni o‘rnatish", "Ofis IT infratuzilmasi"]
-          },
-          {
-            title: "Vositalar va diagnostika",
-            items: ["Tarmoq diagnostikasi", "Infratuzilma monitoringi", "Python (baza)"]
-          }
+          { title: "Tarmoq", items: ["Cisco", "MikroTik", "TCP/IP", "Routing", "Switching", "VLAN", "LAN/WAN", "Wi-Fi"] },
+          { title: "Tizimlar", items: ["Linux", "Windows", "Windows Server", "Proxmox", "Server deployment", "Servislar"] },
+          { title: "Xavfsizlik", items: ["VPN", "Firewall policy", "Kirish nazorati", "CCTV", "Segmentatsiya", "Foydalanuvchi accessi"] },
+          { title: "Operatsiyalar", items: ["Troubleshooting", "Incident handling", "Hujjatlashtirish", "User support", "Pudratchilar bilan koordinatsiya"] },
+          { title: "Monitoring", items: ["Zabbix", "Telegram ogohlantirishlari", "Backup tekshiruvi", "Tarmoq diagnostikasi", "Holatni nazorat qilish"] },
+          { title: "Avtomatlashtirish", items: ["Python basics", "Skriptlar", "Avtomatlashtirish fikrlashi", "CLI bilan erkin ishlash"] }
         ]
       },
       projects: {
-        eyebrow: "Loyihalar",
-        title: "Tanlangan infratuzilma loyihalari",
+        title: "Tanlangan infratuzilma ishlari",
         items: [
-          {
-            title: "Azure Resort tarmoq infratuzilmasi",
-            badge: "Infratuzilma",
-            text: "Dam olish maskani uchun to‘liq tarmoq infratuzilmasi loyihalandi va joriy etildi: MikroTik routerlari, VLAN segmentatsiyasi, firewall siyosatlari, QoS hamda UniFi access pointlar orqali Wi-Fi qamrovi."
-          },
-          {
-            title: "Server va virtualizatsiya infratuzilmasi",
-            badge: "Serverlar",
-            text: "Proxmox virtualizatsiya platformasi joriy etildi, Linux xizmatlari va Windows Server muhitlari ishga tushirildi. PMS tizimi uchun server infratuzilmasi tashkil qilindi."
-          },
-          {
-            title: "Infratuzilma monitoringi va avtomatlashtirish",
-            badge: "Monitoring",
-            text: "Linux asosida Zabbix monitoring tizimi joriy etildi, Telegram orqali avtomatik xabarnomalar va monitoring botlari orqali infratuzilma holati nazorat qilindi."
-          },
-          {
-            title: "Xavfsiz masofaviy kirish",
-            badge: "Xavfsizlik",
-            text: "Muhim xodimlar uchun VPN orqali masofaviy kirish tizimi sozlandi, firewall siyosatlari yordamida tarmoq kirishi nazorat qilindi."
-          },
-          {
-            title: "Xavfsizlik va videokuzatuv tizimlari",
-            badge: "Xavfsizlik",
-            text: "Videokuzatuv tizimlari, kirish nazorati siyosatlari va tarmoq segmentatsiyasi joriy etilib, infratuzilma xavfsizligi ta’minlandi."
-          },
-          {
-            title: "Zaxira va ishonchlilik tizimlari",
-            badge: "Ishonchlilik",
-            text: "Ma’lumotlarni zaxiralash tizimlari joriy etildi va Telegram orqali xabarnomalar yordamida zaxira jarayonlari monitoring qilindi."
-          }
+          { title: "Azure Resort tarmog‘i", badge: "Tarmoq", text: "Dam olish maskani tarmog‘i: MikroTik routing, VLAN, firewall siyosatlari, QoS va UniFi Wi-Fi qamrovi." },
+          { title: "Server va virtualizatsiya", badge: "Serverlar", text: "Biznes tizimlari uchun Proxmox, Linux servislar va Windows Server muhitlarini joriy qilindi." },
+          { title: "Monitoring va alertlar", badge: "Zabbix", text: "Linux asosida Zabbix, Telegram ogohlantirishlari va notification botlarini joriy qilindi." },
+          { title: "Xavfsiz masofaviy kirish", badge: "VPN", text: "Firewall qoidalari va nazoratli kirish yo‘llari bilan VPN access sozlangan." },
+          { title: "Xavfsizlik tizimlari", badge: "CCTV", text: "CCTV, kirish siyosatlari va tarmoq segmentatsiyasini xavfsiz ekspluatatsiya uchun loyihalangan." },
+          { title: "Backup ishonchliligi", badge: "Backup", text: "Monitoring va Telegram ogohlantirishlari bilan backup jarayonlarini joriy qilingan." }
         ]
       },
       certifications: {
-        eyebrow: "Sertifikatlar",
-        title: "Professional rivojlanish",
+        title: "Sertifikatlar va o‘qishlar",
         items: [
-          {
-            title: "CCNA",
-            badge: "Cisco",
-            image: "assets/images/ccna.jpg",
-            text: "Cisco Certified Network Associate. Tarmoq texnologiyalari, routing, switching va korporativ tarmoq infratuzilmasi asoslari."
-          },
-          {
-            title: "LPIC-1",
-            badge: "Linux",
-            image: "assets/images/lpic-1.jpeg",
-            text: "Linux Professional Institute Certification Level 1. Linux tizim administratsiyasi, server muhitlari va infratuzilma operatsiyalari."
-          },
-          {
-            title: "ZCS",
-            badge: "Monitoring",
-            image: "assets/images/zabbix.webp",
-            text: "Zabbix yordamida infratuzilma monitoringi, ogohlantirish tizimlari va IT tizimlar holatini nazorat qilish."
-          }
+          { title: "CCNA", badge: "Cisco", image: "assets/images/ccna.jpg", text: "Routing, switching, enterprise networking va infratuzilma asoslari." },
+          { title: "LPIC-1", badge: "Linux", image: "assets/images/lpic-1.jpeg", text: "Linux administratsiyasi: server muhitlari, shell, paketlar, foydalanuvchilar va servislar." },
+          { title: "ZCS", badge: "Monitoring", image: "assets/images/zabbix.webp", text: "Monitoring, ogohlantirishlar, incident ko‘rinishi va infratuzilma holati." }
         ]
       },
       contact: {
-        eyebrow: "Aloqa",
-        title: "Bog'lanish uchun:",
+        title: "Bog‘lanish",
+        text: "Infratuzilma, tarmoq, tizim administratsiyasi yoki IT operatsiyalar bo‘yicha rollar uchun.",
         labels: {
           email: "Email",
           phone: "Telefon",
@@ -669,10 +346,11 @@ window.PORTFOLIO_DATA = {
           formName: "Ism",
           formEmail: "Email",
           formMessage: "Xabar",
-          formButton: "Xabar yuborish",
+          formButton: "Yuborish",
+          note: "Aniq va ish bo‘yicha yozing — to‘g‘ridan-to‘g‘ri javob beraman."
         }
       },
-      footer: "Oxirgi yangilanish: "
+      footer: "Yangilangan sana: "
     }
   }
 };
