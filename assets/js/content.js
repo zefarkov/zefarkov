@@ -275,7 +275,7 @@ window.PORTFOLIO_DATA = {
       },
       about: {
         title: "Real infratuzilma uchun amaliy muhandis",
-        text: "Ortiqcha gap yo‘q: tarmoqlar, serverlar, monitoring, kirish nazorati va support jarayonlari — har kuni ishlashi kerak bo‘lgan tizimlar.",
+        text: "Ortiqcha gapsiz: tarmoqlar, serverlar, monitoring, kirish nazorati va support jarayonlari — bular har kuni ishlashi kerak bo‘lgan tizimlar.",
         points: [
           "Routing, switching, VLAN, LAN/WAN, Wi-Fi, MikroTik, Cisco",
           "Linux, Windows Server, Proxmox, Zabbix, backup va ogohlantirishlar",
