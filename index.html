@@ -1,229 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Farrukh Abdurazzokov | Network Engineer</title>
-  <meta name="description" content="Personal website of Farrukh Abdurazzokov - network engineer, systems administrator, and IT infrastructure specialist." />
+  <title>Farrukh Abdurazzokov — Network Engineer</title>
+  <meta name="description" content="Network engineer in Tashkent. MikroTik, Windows Server, Linux, Proxmox, VMware ESXi, VPN, Zabbix, Hikvision." />
+  <meta name="theme-color" content="#efefec" />
+  <link rel="canonical" href="https://zefarkov.uz/" />
+  <script>
+    (() => {
+      const host = location.hostname.toLowerCase();
+      if (host === "www.zefarkov.uz") {
+        location.replace("https://zefarkov.uz/");
+        return;
+      }
+      if (host === "zefarkov.uz" && (location.pathname !== "/" || location.search || location.hash)) {
+        history.replaceState(null, "", "/");
+      }
+    })();
+  </script>
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://zefarkov.uz/" />
+  <meta property="og:title" content="Farrukh Abdurazzokov — Network Engineer" />
+  <meta property="og:description" content="MikroTik, Windows Server, Linux, Proxmox, VMware ESXi, VPN, Zabbix, Hikvision." />
+  <meta property="og:image" content="https://zefarkov.uz/assets/images/profile.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a href="#" class="brand"><span id="brand-text">Farrukh</span></a>
+      <button type="button" class="brand" data-scroll-target="top"><span id="brand-text">Farrukh Abdurazzokov</span></button>
 
       <div class="nav-side" id="site-menu">
-        <nav class="nav-links">
-          <a id="nav-about" href="#about">About</a>
-          <a id="nav-experience" href="#experience">Experience</a>
-          <a id="nav-skills" href="#skills">Skills</a>
-          <a id="nav-projects" href="#projects">Projects</a>
-          <a id="nav-certifications" href="#certifications">Certifications</a>
-          <a id="nav-contact" href="#contact">Contact</a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <button type="button" class="nav-link" id="nav-experience" data-scroll-target="experience">Опыт</button>
+          <button type="button" class="nav-link" id="nav-skills" data-scroll-target="skills">Стек</button>
+          <button type="button" class="nav-link" id="nav-certifications" data-scroll-target="certifications">Сертификаты</button>
+          <button type="button" class="nav-link" id="nav-contact" data-scroll-target="contact">Контакты</button>
         </nav>
-      </div>
-
-      <div class="header-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
-          <span id="theme-label">Dark</span>
-        </button>
 
         <div class="lang-switch" aria-label="Language switcher">
-          <button class="lang-btn active" data-lang="en" type="button">EN</button>
-          <button class="lang-btn" data-lang="ru" type="button">RU</button>
-          <button class="lang-btn" data-lang="uz" type="button">UZ</button>
+          <button type="button" class="lang-btn" data-lang="ru">RU</button>
+          <button type="button" class="lang-btn" data-lang="uz">UZ</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
         </div>
       </div>
 
       <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
       <div class="container hero-wrap">
-        <div class="panel hero-main">
-          <h1 id="hero-title"></h1>
-          <p id="hero-text"></p>
-          <div class="stats" id="stats"></div>
+        <div class="hero-main">
+          <h1 id="hero-title">Network Engineer</h1>
+          <p class="hero-stack" id="hero-text">MikroTik · Windows Server · Linux · Proxmox · VMware ESXi · VPN · Zabbix · Hikvision</p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" id="hero-primary" href="#contact">Contact Me</a>
-            <a class="btn btn-secondary" id="hero-secondary" href="#experience">View Experience</a>
-            <a class="btn btn-soft" id="hero-cv" href="assets/cv/CV_Farrukh_EN.pdf" download>Download CV</a>
+            <a class="btn btn-primary" id="hero-cv" href="assets/cv/Farrukh_Abdurazzokov_CV_RU.pdf" download>CV (PDF)</a>
+            <a class="direct-link" id="hero-telegram" href="https://t.me/zefarkov" target="_blank" rel="noopener noreferrer">Telegram</a>
+            <a class="direct-link" id="hero-linkedin" href="https://www.linkedin.com/in/zefarkov" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="direct-link" id="hero-email" href="mailto:zefarkov@gmail.com">Email</a>
           </div>
-          
 
+          <div class="facts" id="facts"></div>
         </div>
 
-        <aside class="panel hero-side">
-          <img class="profile-photo" id="profile-photo" src="assets/images/profile.jpg" alt="Profile photo" />
-
-          <div class="profile-box">
-            <div class="role" id="summary-role"></div>
-          </div>
-          <div class="hero-tags" id="hero-tags"></div>          
+        <aside class="hero-side" aria-label="Profile photo">
+          <img class="profile-photo" id="profile-photo" src="assets/images/profile.jpg" alt="Farrukh Abdurazzokov" width="960" height="960" />
         </aside>
-      </div>
-    </section>
-
-    <section class="section-sm" id="about">
-      <div class="container grid-2">
-        <div class="card" id="about-card">
-          <div class="section-head">
-            <h2></h2>
-            <p></p>
-          </div>
-          <ul class="list-clean"></ul>
-        </div>
-
-        <div class="card" id="value-card">
-          <div class="section-head">
-            <h2></h2>
-          </div>
-          <ul class="list-clean"></ul>
-        </div>
       </div>
     </section>
 
     <section class="section" id="experience">
       <div class="container">
-        <div class="section-head">
-          <h2 id="experience-title"></h2>
-        </div>
+        <h2 id="experience-title">Опыт</h2>
         <div class="timeline" id="experience-list"></div>
       </div>
     </section>
 
     <section class="section" id="skills">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="skills-title"></h2>
-        </div>
-        <div class="skills-grid" id="skills-list"></div>
-      </div>
-    </section>
-
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="projects-title"></h2>
-        </div>
-        <div class="projects-grid" id="projects-list"></div>
+      <div class="container stack-layout">
+        <h2 id="skills-title">Стек</h2>
+        <div class="stack-list" id="skills-list"></div>
       </div>
     </section>
 
     <section class="section" id="certifications">
       <div class="container">
-        <div class="section-head">
-          <h2 id="certs-title"></h2>
-        </div>
+        <h2 id="certs-title">Сертификаты</h2>
         <div class="cert-grid" id="certs-list"></div>
       </div>
     </section>
 
-    <section class="section" id="contact">
-      <div class="container contact-wrap">
-        <div class="contact-card">
-          <div class="section-head">
-            <h2 id="contact-title"></h2>
-          </div>
-
-          <div class="contact-lines">
-            <div class="contact-line">
-              <small id="contact-email-label"></small>
-              <strong id="contact-email-value"></strong>
-            </div>
-            <div class="contact-line">
-              <small id="contact-phone-label"></small>
-              <strong id="contact-phone-value"></strong>
-            </div>
-            <div class="contact-line">
-              <small id="contact-location-label"></small>
-              <strong id="contact-location-value"></strong>
-            </div>
-            <div class="contact-line">
-              <small id="contact-telegram-label"></small>
-              <a id="contact-telegram-value"></a>
-            </div>
-            <div class="contact-line">
-              <small id="contact-linkedin-label"></small>
-              <a id="contact-linkedin-value"></a>
-            </div>
-            <div class="contact-line">
-              <small id="contact-github-label"></small>
-              <a id="contact-github-value"></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-card">
-          <form class="contact-form" id="contact-form" method="POST">
-            <input type="hidden" name="_subject" value="New message from portfolio website">
-            <input type="text" name="_gotcha" style="display:none">
-            <input type="hidden" name="_next" value="https://zefarkov.uz/">
-
-            <div class="field">
-            <label id="label-name" for="name"></label>
-            <input id="name" name="name" type="text" placeholder="Your name" required />
-            </div>
-
-            <div class="field">
-            <label id="label-email" for="email"></label>
-            <input id="email" name="email" type="email" placeholder="your@email.com" required />
-            </div>
-
-            <div class="field">
-            <label id="label-message" for="message"></label>
-            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
-            </div>
-
-            <button class="send-btn" id="send-btn" type="submit"></button>
-            <div class="form-note" id="form-note"></div>
-          </form>
-        </div>
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <h2 id="contact-title">Контакты</h2>
+        <div class="contact-list" id="contact-list"></div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer">
     <div class="container" id="footer-text"></div>
   </footer>
 
-<script src="assets/js/content.js"></script>
-<script src="assets/js/app.js"></script>
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/app.js"></script>
 
-<script>
-  fetch("https://track.zefarkov.uz/", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      eventType: "visit",
-      page: location.href,
-      ref: document.referrer || "",
-      ua: navigator.userAgent
-    })
-  }).catch(() => {});
-
-  document.getElementById("hero-cv")?.addEventListener("click", () => {
+  <script>
     fetch("https://track.zefarkov.uz/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        eventType: "download",
-        page: "cv",
-        ref: location.href,
+        eventType: "visit",
+        page: location.pathname,
+        ref: document.referrer || "",
         ua: navigator.userAgent
       })
     }).catch(() => {});
-  });
-</script>
+
+    document.getElementById("hero-cv")?.addEventListener("click", () => {
+      fetch("https://track.zefarkov.uz/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          eventType: "download",
+          page: "cv",
+          ref: location.pathname,
+          ua: navigator.userAgent
+        })
+      }).catch(() => {});
+    });
+  </script>
 </body>
 </html>

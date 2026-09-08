@@ -1,16 +1,25 @@
-# Farrukh Abdurazzokov - Infrastructure / Network Engineer
+# zefarkov.uz
 
-Personal portfolio website presenting experience in network infrastructure,
-systems administration, monitoring, security, and business IT operations.
+Simple portfolio site for Farrukh Abdurazzokov.
 
-## Live Website
-zefarkov.uz
+## Content principle
 
-## Stack
-HTML, CSS, JavaScript
+The site is written for a one-minute scan by both recruiters and infrastructure engineers:
+- concrete technologies;
+- concrete scope;
+- short experience lines;
+- project need / work / result;
+- no filler or invented metrics.
 
-## Focus
-- Network Infrastructure
-- Systems Administration
-- Infrastructure Monitoring
-- Security & Access Systems
+Main content is in `assets/js/content.js`.
+
+
+## Canonical URL
+
+Production is normalized to `https://zefarkov.uz/`:
+- section navigation never writes hashes;
+- query strings / `index.html` are removed from the address bar on production;
+- `www.zefarkov.uz` redirects to the apex domain;
+- unknown static paths are redirected to the root through `404.html`.
+
+Deploy the **contents of this folder** at the site root.
