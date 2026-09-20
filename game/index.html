@@ -53,8 +53,16 @@
       </section>
 
       <aside class="side right">
-        <div class="card"><div class="label">hold</div><div class="preview"><canvas id="hold" width="140" height="90"></canvas></div></div>
-        <div class="card"><div class="label">next</div><div class="preview"><canvas id="next" width="140" height="90"></canvas></div></div>
+        <div class="preview-stack">
+          <button type="button" class="card preview-card hold-card" data-action="hold" aria-label="Hold current piece">
+            <div class="label">hold</div>
+            <div class="preview"><canvas id="hold" width="140" height="90"></canvas></div>
+          </button>
+          <div class="card preview-card">
+            <div class="label">next</div>
+            <div class="preview"><canvas id="next" width="140" height="90"></canvas></div>
+          </div>
+        </div>
 
         <div class="card theme-card">
           <div class="label">theme</div>
@@ -73,14 +81,10 @@
           <div><kbd>P</kbd> pause</div>
         </div>
 
-        <div class="touch-panel">
-          <button data-action="left">←</button>
-          <button data-action="rotate">↻</button>
-          <button data-action="right">→</button>
-          <button data-action="down">↓</button>
-          <button class="wide text" data-action="drop">DROP</button>
-          <button class="text" data-action="hold">HOLD</button>
-          <button class="text" data-action="pause">PAUSE</button>
+        <div class="touch-panel" aria-label="Mobile controls">
+          <button data-action="left" aria-label="Move left">←</button>
+          <button data-action="right" aria-label="Move right">→</button>
+          <button data-action="rotate" aria-label="Rotate">↻</button>
         </div>
       </aside>
     </section>
