@@ -114,7 +114,7 @@
     current=null; next=makePiece(takeType()); canHold=true;
     running=true; paused=false; ended=false; dropCounter=0; lockCounter=0;
     stateEl.textContent="playing"; pauseBtn.textContent="PAUSE";
-    if(mobilePauseBtn){ mobilePauseBtn.textContent="Ⅱ"; mobilePauseBtn.setAttribute("aria-label","Pause"); }
+    if(mobilePauseBtn){ mobilePauseBtn.textContent="PAUSE"; mobilePauseBtn.setAttribute("aria-label","Pause"); }
     overlay.classList.remove("show"); clearPreview(holdCtx,holdCanvas); updateHUD();
     spawn(); last=performance.now(); requestAnimationFrame(loop);
   }
@@ -129,7 +129,7 @@
     paused=!paused; stateEl.textContent=paused?"paused":"playing";
     pauseBtn.textContent=paused?"RESUME":"PAUSE";
     if(mobilePauseBtn){
-      mobilePauseBtn.textContent=paused?"▶":"Ⅱ";
+      mobilePauseBtn.textContent=paused?"RESUME":"PAUSE";
       mobilePauseBtn.setAttribute("aria-label", paused?"Resume":"Pause");
     }
     if(paused){
