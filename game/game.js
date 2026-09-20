@@ -18,9 +18,10 @@
   const game = $("#game"), ctx = game.getContext("2d");
   const nextCanvas = $("#next"), nextCtx = nextCanvas.getContext("2d");
   const holdCanvas = $("#hold"), holdCtx = holdCanvas.getContext("2d");
-  const overlay = $("#overlay"), title = $("#overlayTitle"), overlayText = $("#overlayText");
+  const overlay = $("#overlay");
   const startBtn = $("#startBtn"), pauseBtn = $("#pauseBtn"), stateEl = $("#state");
   const dayBtn = $("#dayBtn"), nightBtn = $("#nightBtn");
+  const mobileThemeBtn = $("#mobileThemeBtn"), mobilePauseBtn = $("#mobilePauseBtn");
 
   let board = emptyBoard(), current = null, next = null, hold = null, canHold = true;
   let bag = [], score = 0, lines = 0, level = 1;
@@ -113,14 +114,13 @@
     current=null; next=makePiece(takeType()); canHold=true;
     running=true; paused=false; ended=false; dropCounter=0; lockCounter=0;
     stateEl.textContent="playing"; pauseBtn.textContent="PAUSE";
+    if(mobilePauseBtn){ mobilePauseBtn.textContent="Ⅱ"; mobilePauseBtn.setAttribute("aria-label","Pause"); }
     overlay.classList.remove("show"); clearPreview(holdCtx,holdCanvas); updateHUD();
     spawn(); last=performance.now(); requestAnimationFrame(loop);
   }
 
   function finish(){
     running=false; ended=true; stateEl.textContent="game over";
-    title.textContent="Finished";
-    overlayText.textContent="Score "+score.toLocaleString()+" · "+lines+" lines · level "+level;
     startBtn.textContent="PLAY AGAIN"; overlay.classList.add("show"); draw();
   }
 
@@ -128,9 +128,11 @@
     if(ended || !current) return;
     paused=!paused; stateEl.textContent=paused?"paused":"playing";
     pauseBtn.textContent=paused?"RESUME":"PAUSE";
+    if(mobilePauseBtn){
+      mobilePauseBtn.textContent=paused?"▶":"Ⅱ";
+      mobilePauseBtn.setAttribute("aria-label", paused?"Resume":"Pause");
+    }
     if(paused){
-      title.textContent="Paused";
-      overlayText.textContent="The board will stay exactly where you left it.";
       startBtn.textContent="RESUME"; overlay.classList.add("show"); draw();
     }else{
       overlay.classList.remove("show"); last=performance.now(); requestAnimationFrame(loop);
@@ -274,6 +276,8 @@
   startBtn.addEventListener("click",()=>paused?togglePause():start());
   pauseBtn.addEventListener("click",togglePause);
   $("#themeToggle").addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
+  mobileThemeBtn?.addEventListener("click",()=>setTheme(document.documentElement.dataset.theme==="dark"?"light":"dark"));
+  mobilePauseBtn?.addEventListener("click",togglePause);
   dayBtn.addEventListener("click",()=>setTheme("light"));
   nightBtn.addEventListener("click",()=>setTheme("dark"));
 
