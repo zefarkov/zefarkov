@@ -12,17 +12,6 @@
   <main class="app">
     <section class="shell">
       <aside class="side left">
-        <div class="brand">
-          <div class="eyebrow">game no. 01</div>
-          <div class="title">TETRIS</div>
-        </div>
-
-        <div class="mobile-hud">
-          <div class="mini"><span>score</span><strong id="scoreM">0</strong></div>
-          <div class="mini"><span>lines</span><strong id="linesM">0</strong></div>
-          <div class="mini"><span>level</span><strong id="levelM">1</strong></div>
-        </div>
-
         <div class="desktop-stats">
           <div class="card"><div class="label">score</div><div class="metric" id="score">0</div></div>
           <div class="card"><div class="label">lines</div><div class="metric small" id="lines">0</div></div>
@@ -43,9 +32,6 @@
 
           <div class="overlay show" id="overlay">
             <div class="overlay-card">
-              <div class="eyebrow">game no. 01</div>
-              <h1 id="overlayTitle">Tetris</h1>
-              <p id="overlayText">Classic Tetris. No noise. Just the board.</p>
               <button class="primary" id="startBtn">START</button>
             </div>
           </div>
@@ -53,14 +39,27 @@
       </section>
 
       <aside class="side right">
-        <div class="preview-stack">
-          <button type="button" class="card preview-card hold-card" data-action="hold" aria-label="Hold current piece">
-            <div class="label">hold</div>
-            <div class="preview"><canvas id="hold" width="140" height="90"></canvas></div>
-          </button>
-          <div class="card preview-card">
-            <div class="label">next</div>
-            <div class="preview"><canvas id="next" width="140" height="90"></canvas></div>
+        <div class="mobile-rail">
+          <div class="mobile-hud">
+            <div class="mini"><span>score</span><strong id="scoreM">0</strong></div>
+            <div class="mini"><span>lines</span><strong id="linesM">0</strong></div>
+            <div class="mini"><span>level</span><strong id="levelM">1</strong></div>
+          </div>
+
+          <div class="preview-stack">
+            <button type="button" class="card preview-card hold-card" data-action="hold" aria-label="Hold current piece">
+              <div class="label">hold</div>
+              <div class="preview"><canvas id="hold" width="140" height="90"></canvas></div>
+            </button>
+            <div class="card preview-card">
+              <div class="label">next</div>
+              <div class="preview"><canvas id="next" width="140" height="90"></canvas></div>
+            </div>
+          </div>
+
+          <div class="mobile-utility">
+            <button type="button" id="mobileThemeBtn" aria-label="Toggle theme">◐</button>
+            <button type="button" id="mobilePauseBtn" aria-label="Pause">Ⅱ</button>
           </div>
         </div>
 
@@ -83,8 +82,8 @@
 
         <div class="touch-panel" aria-label="Mobile controls">
           <button data-action="left" aria-label="Move left">←</button>
-          <button data-action="right" aria-label="Move right">→</button>
           <button data-action="rotate" aria-label="Rotate">↻</button>
+          <button data-action="right" aria-label="Move right">→</button>
         </div>
       </aside>
     </section>
