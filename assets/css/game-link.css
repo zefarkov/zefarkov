@@ -1,0 +1,26 @@
+.footer-line{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.quiet-game-link{
+  flex:0 0 auto;
+  color:#5b5b5b;
+  opacity:.48;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.08em;
+  text-transform:lowercase;
+  text-decoration:none;
+  transition:opacity .15s ease,color .15s ease;
+}
+.quiet-game-link:hover,
+.quiet-game-link:focus-visible{
+  color:#111;
+  opacity:.92;
+}
+@media(max-width:480px){
+  .footer-line{align-items:flex-end}
+  .quiet-game-link{font-size:9px;opacity:.42}
+}
