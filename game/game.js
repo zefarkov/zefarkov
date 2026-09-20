@@ -277,27 +277,99 @@
   dayBtn.addEventListener("click",()=>setTheme("light"));
   nightBtn.addEventListener("click",()=>setTheme("dark"));
 
-  document.querySelectorAll("[data-action]").forEach(b=>b.addEventListener("pointerdown",e=>{
-    e.preventDefault(); const a=b.dataset.action;
-    if(a==="left") move(-1,0); else if(a==="right") move(1,0);
-    else if(a==="down"){if(move(0,1)){score++;updateHUD();}}
-    else if(a==="rotate") rotate(1); else if(a==="drop") hardDrop();
-    else if(a==="hold") holdPiece(); else if(a==="pause") togglePause();
-  }));
+  function doAction(a){
+    if(a==="left") move(-1,0);
+    else if(a==="right") move(1,0);
+    else if(a==="down"){ if(move(0,1)){score++;updateHUD();} }
+    else if(a==="rotate") rotate(1);
+    else if(a==="drop") hardDrop();
+    else if(a==="hold") holdPiece();
+    else if(a==="pause") togglePause();
+  }
+
+  document.querySelectorAll("[data-action]").forEach(b=>{
+    let delayTimer=null, repeatTimer=null;
+    const stopRepeat=()=>{
+      clearTimeout(delayTimer); clearInterval(repeatTimer);
+      delayTimer=null; repeatTimer=null;
+    };
+    b.addEventListener("pointerdown",e=>{
+      e.preventDefault();
+      b.setPointerCapture?.(e.pointerId);
+      const a=b.dataset.action;
+      doAction(a);
+      if(a==="left" || a==="right" || a==="down"){
+        delayTimer=setTimeout(()=>{
+          repeatTimer=setInterval(()=>doAction(a),65);
+        },180);
+      }
+    });
+    b.addEventListener("pointerup",stopRepeat);
+    b.addEventListener("pointercancel",stopRepeat);
+    b.addEventListener("lostpointercapture",stopRepeat);
+  });
 
   let touch=null;
   game.addEventListener("pointerdown",e=>{
     if(e.pointerType!=="touch") return;
-    touch={x:e.clientX,y:e.clientY,t:performance.now()}; game.setPointerCapture?.(e.pointerId);
+    e.preventDefault();
+    touch={
+      startX:e.clientX,startY:e.clientY,
+      lastX:e.clientX,lastY:e.clientY,
+      t:performance.now(),moved:false
+    };
+    game.setPointerCapture?.(e.pointerId);
   });
+
+  game.addEventListener("pointermove",e=>{
+    if(!touch || e.pointerType!=="touch" || !running || paused || ended) return;
+    e.preventDefault();
+    const step=Math.max(18,cell*.62);
+
+    let dx=e.clientX-touch.lastX;
+    while(Math.abs(dx)>=step){
+      const dir=dx>0?1:-1;
+      move(dir,0);
+      touch.lastX+=dir*step;
+      dx=e.clientX-touch.lastX;
+      touch.moved=true;
+    }
+
+    let dy=e.clientY-touch.lastY;
+    while(dy>=step){
+      if(move(0,1)){ score++; updateHUD(); }
+      touch.lastY+=step;
+      dy=e.clientY-touch.lastY;
+      touch.moved=true;
+    }
+  });
+
   game.addEventListener("pointerup",e=>{
-    if(!touch||e.pointerType!=="touch") return;
-    const dx=e.clientX-touch.x,dy=e.clientY-touch.y,ax=Math.abs(dx),ay=Math.abs(dy),dt=performance.now()-touch.t;
-    if(ax<16&&ay<16&&dt<350) rotate(1);
-    else if(ay>ax&&dy>35){ if(dy>95) hardDrop(); else if(move(0,1)){score++;updateHUD();} }
-    else if(ax>28) move(dx>0?1:-1,0);
+    if(!touch || e.pointerType!=="touch") return;
+    e.preventDefault();
+    const dx=e.clientX-touch.startX;
+    const dy=e.clientY-touch.startY;
+    const ax=Math.abs(dx), ay=Math.abs(dy);
+    const dt=performance.now()-touch.t;
+    const step=Math.max(18,cell*.62);
+
+    if(dy>Math.max(64,cell*2.1) && dt<300){
+      hardDrop();
+    }else if(!touch.moved && ax<14 && ay<14 && dt<360){
+      rotate(1);
+    }else if(!touch.moved && ax>ay && ax>=step){
+      const count=Math.min(5,Math.max(1,Math.round(ax/step)));
+      for(let i=0;i<count;i++) move(dx>0?1:-1,0);
+    }else if(!touch.moved && dy>=step){
+      const count=Math.min(5,Math.max(1,Math.round(dy/step)));
+      for(let i=0;i<count;i++){
+        if(move(0,1)){ score++; updateHUD(); }
+      }
+    }
     touch=null;
   });
+
+  game.addEventListener("pointercancel",()=>{ touch=null; });
 
   addEventListener("resize",resize);
   initTheme(); updateHUD(); requestAnimationFrame(resize);
