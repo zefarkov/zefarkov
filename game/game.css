@@ -24,14 +24,6 @@ button{font:inherit;color:inherit}
   gap:16px;align-items:center;justify-content:center
 }
 .side{display:flex;flex-direction:column;gap:10px;min-width:0}
-.game-title{
-  font-size:18px;
-  line-height:1;
-  font-weight:760;
-  letter-spacing:-.035em;
-}
-.mobile-game-title{display:none}
-.desktop-game-title{margin:0 0 4px}
 .brand{margin-bottom:4px}
 .eyebrow,.label,.state{
   color:var(--muted);font-size:10px;letter-spacing:.17em;text-transform:uppercase
@@ -76,7 +68,14 @@ button{font:inherit;color:inherit}
 }
 .overlay.show{opacity:1;pointer-events:auto}
 .overlay-card{width:min(320px,100%);text-align:center}
-.overlay h1{margin:0 0 8px;font-size:30px;letter-spacing:-.05em}
+.start-title{
+  margin:0 0 16px;
+  font-size:32px;
+  line-height:1;
+  font-weight:780;
+  letter-spacing:-.045em;
+}
+.overlay h1{margin:0 0 16px;font-size:32px;letter-spacing:-.045em}
 .overlay p{margin:0 0 20px;color:var(--muted);font-size:13px;line-height:1.5}
 .primary{
   width:100%;padding:13px 16px;border:1px solid var(--button);border-radius:13px;
@@ -146,14 +145,6 @@ kbd{
     gap:6px;
     align-self:stretch;
   }
-  .mobile-game-title{
-    display:block;
-    padding:2px 3px 3px;
-    font-size:15px;
-    line-height:1;
-    letter-spacing:-.035em;
-  }
-
   .mobile-hud{
     display:grid;
     grid-template-columns:1fr;
