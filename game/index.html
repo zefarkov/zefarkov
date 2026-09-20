@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no" />
+  <meta name="theme-color" content="#06090d" />
+  <title>Quiet Blocks</title>
+  <meta name="description" content="A quiet falling-block game." />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="shell">
+      <aside class="side left">
+        <div class="brand">
+          <div class="eyebrow">quiet game no. 01</div>
+          <div class="title">QUIET BLOCKS</div>
+        </div>
+
+        <div class="mobile-hud">
+          <div class="mini"><span>score</span><strong id="scoreM">0</strong></div>
+          <div class="mini"><span>lines</span><strong id="linesM">0</strong></div>
+          <div class="mini"><span>level</span><strong id="levelM">1</strong></div>
+        </div>
+
+        <div class="desktop-stats">
+          <div class="card"><div class="label">score</div><div class="metric" id="score">0</div></div>
+          <div class="card"><div class="label">lines</div><div class="metric small" id="lines">0</div></div>
+          <div class="card"><div class="label">level</div><div class="metric small" id="level">1</div></div>
+        </div>
+      </aside>
+
+      <section class="game-wrap">
+        <div class="board-shell">
+          <canvas id="game" width="300" height="600" aria-label="Quiet Blocks game board"></canvas>
+          <div class="topbar">
+            <span class="state" id="state">ready</span>
+            <div class="top-actions">
+              <button class="chip" id="themeToggle" aria-label="Toggle day and night theme">THEME</button>
+              <button class="chip" id="pauseBtn">PAUSE</button>
+            </div>
+          </div>
+
+          <div class="overlay show" id="overlay">
+            <div class="overlay-card">
+              <div class="eyebrow">quiet game no. 01</div>
+              <h1 id="overlayTitle">Quiet Blocks</h1>
+              <p id="overlayText">A precise falling-block game. No noise. Just the board.</p>
+              <button class="primary" id="startBtn">START</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="side right">
+        <div class="card"><div class="label">hold</div><div class="preview"><canvas id="hold" width="140" height="90"></canvas></div></div>
+        <div class="card"><div class="label">next</div><div class="preview"><canvas id="next" width="140" height="90"></canvas></div></div>
+
+        <div class="card theme-card">
+          <div class="label">theme</div>
+          <div class="theme-buttons">
+            <button id="dayBtn">DAY</button>
+            <button id="nightBtn">NIGHT</button>
+          </div>
+        </div>
+
+        <div class="card controls">
+          <div><kbd>←</kbd> <kbd>→</kbd> move</div>
+          <div><kbd>↑</kbd> rotate</div>
+          <div><kbd>↓</kbd> soft drop</div>
+          <div><kbd>Space</kbd> hard drop</div>
+          <div><kbd>C</kbd> hold</div>
+          <div><kbd>P</kbd> pause</div>
+        </div>
+
+        <div class="touch-panel">
+          <button data-action="left">←</button>
+          <button data-action="rotate">↻</button>
+          <button data-action="right">→</button>
+          <button data-action="down">↓</button>
+          <button class="wide text" data-action="drop">DROP</button>
+          <button class="text" data-action="hold">HOLD</button>
+          <button class="text" data-action="pause">PAUSE</button>
+        </div>
+      </aside>
+    </section>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
