@@ -313,59 +313,28 @@
   game.addEventListener("pointerdown",e=>{
     if(e.pointerType!=="touch") return;
     e.preventDefault();
-    touch={
-      startX:e.clientX,startY:e.clientY,
-      lastX:e.clientX,lastY:e.clientY,
-      t:performance.now(),moved:false
-    };
+    touch={x:e.clientX,y:e.clientY,t:performance.now()};
     game.setPointerCapture?.(e.pointerId);
   });
 
   game.addEventListener("pointermove",e=>{
-    if(!touch || e.pointerType!=="touch" || !running || paused || ended) return;
+    if(!touch || e.pointerType!=="touch") return;
     e.preventDefault();
-    const step=Math.max(18,cell*.62);
-
-    let dx=e.clientX-touch.lastX;
-    while(Math.abs(dx)>=step){
-      const dir=dx>0?1:-1;
-      move(dir,0);
-      touch.lastX+=dir*step;
-      dx=e.clientX-touch.lastX;
-      touch.moved=true;
-    }
-
-    let dy=e.clientY-touch.lastY;
-    while(dy>=step){
-      if(move(0,1)){ score++; updateHUD(); }
-      touch.lastY+=step;
-      dy=e.clientY-touch.lastY;
-      touch.moved=true;
-    }
   });
 
   game.addEventListener("pointerup",e=>{
     if(!touch || e.pointerType!=="touch") return;
     e.preventDefault();
-    const dx=e.clientX-touch.startX;
-    const dy=e.clientY-touch.startY;
-    const ax=Math.abs(dx), ay=Math.abs(dy);
-    const dt=performance.now()-touch.t;
-    const step=Math.max(18,cell*.62);
 
-    if(dy>Math.max(64,cell*2.1) && dt<300){
+    const dx=e.clientX-touch.x;
+    const dy=e.clientY-touch.y;
+    const ax=Math.abs(dx);
+    const minSwipe=Math.max(42,cell*1.15);
+
+    if(running && !paused && !ended && dy>=minSwipe && dy>ax*1.15){
       hardDrop();
-    }else if(!touch.moved && ax<14 && ay<14 && dt<360){
-      rotate(1);
-    }else if(!touch.moved && ax>ay && ax>=step){
-      const count=Math.min(5,Math.max(1,Math.round(ax/step)));
-      for(let i=0;i<count;i++) move(dx>0?1:-1,0);
-    }else if(!touch.moved && dy>=step){
-      const count=Math.min(5,Math.max(1,Math.round(dy/step)));
-      for(let i=0;i<count;i++){
-        if(move(0,1)){ score++; updateHUD(); }
-      }
     }
+
     touch=null;
   });
 
