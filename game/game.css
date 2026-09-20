@@ -106,18 +106,18 @@ kbd{
 @media(max-width:760px){
   .app{place-items:start center;padding:10px 10px 14px}
   .shell{max-width:470px;grid-template-columns:1fr;gap:9px;align-items:start}
-  .side.left{order:1}.game-wrap{order:2;width:100%;max-width:none}
+  .side.left{order:1}.game-wrap{order:2;width:min(100%,340px);max-width:none}
   .side.right{order:3;display:grid;grid-template-columns:1fr 1fr;gap:9px}
   .brand{margin:0}.desktop-stats{display:none}.mobile-hud{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-  .board-shell{aspect-ratio:10/18.8;max-height:66dvh}.controls{display:none}.theme-card{grid-column:1/-1}
+  .board-shell{aspect-ratio:10/20}.controls{display:none}.theme-card{grid-column:1/-1}
   .touch-panel{display:grid;grid-column:1/-1}.preview{aspect-ratio:1.95}
 }
 @media(max-width:480px){
-  .title{font-size:19px}.board-shell{max-height:61dvh;aspect-ratio:10/18.4}
+  .title{font-size:19px}.game-wrap{width:min(100%,320px)}
 }
 @media(max-width:760px) and (orientation:landscape){
   .shell{max-width:980px;grid-template-columns:minmax(250px,44dvh) 1fr}
-  .game-wrap{grid-column:1;grid-row:1/span 2}.side.left{grid-column:2}.side.right{grid-column:2}
+  .game-wrap{grid-column:1;grid-row:1/span 2;width:min(100%,calc((100dvh - 20px)/2))}.side.left{grid-column:2}.side.right{grid-column:2}
   .board-shell{max-height:calc(100dvh - 20px)}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
